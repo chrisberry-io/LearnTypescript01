@@ -8,11 +8,12 @@ const StyledLayoutMain = styled.main`
 `
 
 interface LayoutMainProps {
+  children: React.ReactNode
   className?: string
 }
 
-const LayoutMain: React.FC<LayoutMainProps> = ({ children, className }) => (
-  <StyledLayoutMain className={className}>{children}</StyledLayoutMain>
-)
+const LayoutMain = ({ children, className }: LayoutMainProps) => {
+  return <StyledLayoutMain className={className}>{children}</StyledLayoutMain>
+}
 
 export default LayoutMain
